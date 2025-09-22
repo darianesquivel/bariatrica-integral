@@ -1,0 +1,140 @@
+<header
+  id="header"
+  class="bg-white backdrop-blur-md sticky top-0 z-50 shadow-md"
+>
+  <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <a href="/" class="flex items-center">
+      <img
+        src="/logo.png"
+        alt="Bariatrica Integral Logo"
+        class="h-12 md:h-16 w-auto"
+      />
+    </a>
+
+    <div class="hidden md:flex items-center space-x-6">
+      <a
+        href="/"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Inicio</a
+      >
+      <a
+        href="#benefits"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Beneficios</a
+      >
+      <a
+        href="#testimonials"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Testimonios</a
+      >
+      <a
+        href="#treatment-steps"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Tratamiento</a
+      >
+      <a
+        href="#our-team"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Equipo</a
+      >
+      <a
+        href="#locations"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Centros</a
+      >
+      <a
+        href="#faq"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Preguntas</a
+      >
+    </div>
+
+    <a
+      href="#contact"
+      class="hidden md:block bg-brand-blue text-white font-bold py-2 px-6 rounded-full hover:bg-brand-blue-dark transition-transform duration-300 hover:scale-105"
+    >
+      Contacto
+    </a>
+
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-brand-gray-dark focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white">
+    <a
+      href="#home"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Home</a
+    >
+    <a
+      href="#beneficios"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Beneficios</a
+    >
+    <a
+      href="#pacientes"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Pacientes</a
+    >
+    <a
+      href="#tratamiento"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Tratamiento</a
+    >
+    <a
+      href="#equipo"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Equipo</a
+    >
+    <a
+      href="#centros"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Centros</a
+    >
+    <a
+      href="#faq"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Preguntas Frecuentes</a
+    >
+    <div class="p-4">
+      <a
+        href="#contacto"
+        class="w-full text-center block bg-brand-blue text-white font-bold py-3 px-6 rounded-full hover:bg-brand-blue-dark transition-transform duration-300 hover:scale-105"
+      >
+        Contacto
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+
+  // Cierra el menú si se hace clic en un enlace
+  const mobileLinks = document.querySelectorAll("#mobile-menu a");
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu?.classList.add("hidden");
+    });
+  });
+</script>
