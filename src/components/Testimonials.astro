@@ -1,3 +1,7 @@
+---
+const prevVideoImage = `${import.meta.env.BASE_URL}prevideo.png`;
+---
+
 <section id="testimonials" class="py-20 bg-brand-gray-light">
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
@@ -19,7 +23,7 @@
             class="w-full max-h-[750px] object-cover rounded-md"
             controls
             preload="metadata"
-            poster="/prevideo.png"
+            poster={prevVideoImage}
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/04/04-Paciente-1-1.mp4"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
@@ -40,7 +44,7 @@
             class="w-full max-h-[750px] object-cover rounded-md"
             controls
             preload="metadata"
-            poster="/prevideo.png"
+            poster={prevVideoImage}
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/04/05-Paciente-2-1.mp4"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
@@ -61,7 +65,7 @@
             class="w-full max-h-[750px] object-cover rounded-md"
             controls
             preload="metadata"
-            poster="/prevideo.png"
+            poster={prevVideoImage}
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/04/06-Paciente-3-1.mp4"
           >
             Tu navegador no soporta el tag de video. Te recomendamos

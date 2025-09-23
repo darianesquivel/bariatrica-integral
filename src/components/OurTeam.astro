@@ -1,3 +1,9 @@
+---
+const prevVideoImage1 = `${import.meta.env.BASE_URL}lucasprevideo.png`;
+const prevVideoImage2 = `${import.meta.env.BASE_URL}fernandaprevideo.png`;
+const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
+---
+
 <section id="our-team" class="py-20 bg-brand-gray-light">
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
@@ -21,7 +27,7 @@
             class="w-full object-cover rounded-md max-h-[335px] md:max-h-[600px]"
             controls
             preload="metadata"
-            poster="/lucasprevideo.png"
+            poster={prevVideoImage1}
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/03/01-Dr.-Lucas-Travieso.mp4"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
@@ -48,7 +54,7 @@
             class="w-full object-cover rounded-md max-h-[335px] md:max-h-[600px]"
             controls
             preload="metadata"
-            poster="/fernandaprevideo.png"
+            poster={prevVideoImage2}
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/03/03-Dra.-Fernanda-Gonzalez.mp4"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
@@ -74,7 +80,7 @@
             class="w-full object-cover rounded-md max-h-[335px] md:max-h-[600px]"
             controls
             preload="metadata"
-            poster="/nataliaprevideo.png"
+            poster={prevVideoImage3}
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/03/02-Dra.-Natalia-Beitone.mp4"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
