@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://darianesquivel.github.io",
-  base: "/bariatrica-integral",
+  base: "/bariatrica-integral/",
   vite: {
     plugins: [tailwindcss()],
   },
