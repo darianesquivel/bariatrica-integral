@@ -1,0 +1,160 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+const logoURL = `${import.meta.env.BASE_URL}logo.png`;
+
+// Array de opciones dinámicas para el select
+const tratamientos = [
+  "Manga Gástrica",
+  "Bypass Gástrico",
+  "SADI-S",
+  "Cirugías de Revisión",
+  "Balón Gástrico",
+  "Tratamiento Médico",
+  "Otro (especificar en comentarios)",
+];
+---
+
+<Layout title="Contacto - Bariatrica Integral">
+  <section class="bg-gray-100 py-12 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <div class="flex justify-center">
+          <img
+            src={logoURL}
+            alt="Bariatrica Integral Logo"
+            class="h-10 w-auto mb-4"
+          />
+        </div>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-brand-blue-dark mb-4"
+        >
+          Agenda una consulta
+        </h2>
+        <p class="text-center text-brand-gray-dark mb-8">
+          Completa el formulario y nos pondremos en contacto contigo a la
+          brevedad.
+        </p>
+
+        <form action="#" method="post" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label
+                for="nombre"
+                class="block text-sm font-medium text-brand-gray-dark"
+                >Nombre</label
+              >
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+              />
+            </div>
+            <div>
+              <label
+                for="apellido"
+                class="block text-sm font-medium text-brand-gray-dark"
+                >Apellido</label
+              >
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                required
+                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-medium text-brand-gray-dark"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <label
+              for="telefono"
+              class="block text-sm font-medium text-brand-gray-dark"
+              >Teléfono</label
+            >
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <label
+              for="tratamiento"
+              class="block text-sm font-medium text-brand-gray-dark"
+              >Tratamiento de interés</label
+            >
+            <select
+              id="tratamiento"
+              name="tratamiento"
+              required
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+            >
+              <option value="">Selecciona una opción</option>
+              {
+                tratamientos.map((tratamiento) => (
+                  <option value={tratamiento}>{tratamiento}</option>
+                ))
+              }
+            </select>
+          </div>
+          <div>
+            <label
+              for="horario"
+              class="block text-sm font-medium text-brand-gray-dark"
+              >Horario de contacto</label
+            >
+            <select
+              id="horario"
+              name="horario"
+              required
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+            >
+              <option value="">Selecciona una opción</option>
+              <option value="Mañana">Mañana</option>
+              <option value="Tarde">Tarde</option>
+            </select>
+          </div>
+          <div>
+            <label
+              for="comentario"
+              class="block text-sm font-medium text-brand-gray-dark"
+              >Comentario</label
+            >
+            <textarea
+              id="comentario"
+              name="comentario"
+              rows="4"
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-brand-blue focus:ring focus:ring-brand-blue focus:ring-opacity-50"
+            ></textarea>
+          </div>
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="bg-brand-blue text-white font-bold py-3 px-8 rounded-full hover:bg-brand-blue-dark transition-colors duration-300 hover:scale-105"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

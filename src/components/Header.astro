@@ -7,54 +7,44 @@ const logoURL = `${import.meta.env.BASE_URL}logo.png`;
   class="bg-white backdrop-blur-md sticky top-0 z-50 shadow-md"
 >
   <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-    <a href="#" class="flex items-center">
+    <a href="/#" class="flex items-center">
       <img
         src={logoURL}
         alt="Bariatrica Integral Logo"
-        class="h-12 md:h-16 w-auto"
+        class="h-8 md:h-8 w-auto"
       />
     </a>
 
     <div class="hidden md:flex items-center space-x-6">
       <a
-        href="#"
+        href="/#"
         class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
         >Inicio</a
       >
       <a
-        href="#benefits"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
-        >Beneficios</a
-      >
-      <a
-        href="#testimonials"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
-        >Testimonios</a
-      >
-      <a
-        href="#treatment-steps"
+        href="/#treatment-steps"
         class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
         >Tratamiento</a
       >
       <a
-        href="#our-team"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
-        >Equipo</a
-      >
-      <a
-        href="#locations"
+        href="/#locations"
         class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
         >Centros</a
       >
       <a
-        href="#faq"
+        href="/#faq"
         class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
         >Preguntas</a
+      >
+      <a
+        href="/Procedures"
+        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        >Procedimientos</a
       >
     </div>
 
     <a
-      href="#contact"
+      href="/Contact"
       class="hidden md:block bg-brand-blue text-white font-bold py-2 px-6 rounded-full hover:bg-brand-blue-dark transition-transform duration-300 hover:scale-105"
     >
       Contacto
@@ -84,43 +74,33 @@ const logoURL = `${import.meta.env.BASE_URL}logo.png`;
     class="md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0"
   >
     <a
-      href="#home"
+      href="/#home"
       class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
-      >Home</a
+      >Inicio</a
     >
     <a
-      href="#benefits"
-      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
-      >Beneficios</a
-    >
-    <a
-      href="#testimonials"
-      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
-      >Pacientes</a
-    >
-    <a
-      href="#treatment-steps"
+      href="/#treatment-steps"
       class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
       >Tratamiento</a
     >
     <a
-      href="#our-team"
-      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
-      >Equipo</a
-    >
-    <a
-      href="#locations"
+      href="/#locations"
       class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
       >Centros</a
     >
     <a
-      href="#faq"
+      href="/#faq"
       class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
       >Preguntas Frecuentes</a
     >
+    <a
+      href="/Procedures"
+      class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
+      >Procedimientos</a
+    >
     <div class="p-4">
       <a
-        href="#contact"
+        href="/Contact"
         class="w-full text-center block bg-brand-blue text-white font-bold py-3 px-6 rounded-full hover:bg-brand-blue-dark transition-transform duration-300 hover:scale-105"
       >
         Contacto
