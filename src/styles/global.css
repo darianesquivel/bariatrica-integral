@@ -57,16 +57,3 @@ body {
   --color-brand-gray-light: #f2f2f2;
   --color-brand-gray-dark: #333333;
 }
-
-/* colors: {
-    "brand-blue": {
-      light: "#00AEEF", // Celeste principal
-      DEFAULT: "#0073AE", // Azul corporativo
-      dark: "#004A7B", // Azul oscuro
-    },
-    "brand-gray": {
-      light: "#F2F2F2",
-      DEFAULT: "#6D6E71",
-      dark: "#333333",
-    },
-  }, */

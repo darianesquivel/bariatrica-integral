@@ -240,11 +240,9 @@
       details.addEventListener("toggle", () => {
         const content = details.querySelector(".faq-content");
         if (details.open) {
-          // Si el acordeón se abre
           content?.classList.remove("max-h-0", "opacity-0");
           content?.classList.add("max-h-screen", "opacity-100");
         } else {
-          // Si el acordeón se cierra
           content?.classList.remove("max-h-screen", "opacity-100");
           content?.classList.add("max-h-0", "opacity-0");
         }
