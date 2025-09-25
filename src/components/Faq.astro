@@ -12,13 +12,13 @@
     <div class="max-w-3xl mx-auto space-y-4">
       <details
         data-aos="fade-up"
-        class="group bg-white p-4 rounded-lg shadow-md overflow-hidden"
+        class="group bg-white p-4 rounded-lg shadow-md"
       >
         <summary
           class="flex justify-between items-center font-bold text-lg text-brand-blue-dark cursor-pointer list-none"
         >
           ¿Quiénes son posibles candidatos a la cirugía?
-          <span class="transition group-open:rotate-180">
+          <span class="transition-transform duration-300 group-open:rotate-180">
             <svg
               fill="none"
               height="24"
@@ -35,9 +35,9 @@
           </span>
         </summary>
         <div
-          class="faq-content transition-all duration-500 ease-in-out max-h-0 opacity-0"
+          class="faq-content overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out max-h-0 opacity-0"
         >
-          <p class="text-brand-gray-dark mt-4">
+          <p class="text-brand-gray-dark pt-4">
             Generalmente, son candidatos los pacientes con un Índice de Masa
             Corporal (IMC) mayor a 40, o mayor a 35 si presentan enfermedades
             asociadas como diabetes o hipertensión. La decisión final se toma
@@ -48,13 +48,14 @@
 
       <details
         data-aos="fade-up"
+        data-aos-delay="50"
         class="group bg-white p-4 rounded-lg shadow-md"
       >
         <summary
           class="flex justify-between items-center font-bold text-lg text-brand-blue-dark cursor-pointer list-none"
         >
           ¿Qué estudios debo realizar previo a la cirugía? <span
-            class="transition group-open:rotate-180"
+            class="transition-transform duration-300 group-open:rotate-180"
           >
             <svg
               fill="none"
@@ -70,12 +71,12 @@
           </span>
         </summary>
         <div
-          class="faq-content transition-all duration-500 ease-in-out max-h-0 opacity-0"
+          class="faq-content overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out max-h-0 opacity-0"
         >
-          <p class="text-brand-gray-dark mt-4 mb-4">
+          <p class="text-brand-gray-dark pt-4 mb-4">
             Previo a la cirugía se deben realizar los siguiente estudios:
           </p>
-          <ul class="list-disc list-inside">
+          <ul class="list-disc list-inside text-brand-gray-dark space-y-1 pl-4">
             <li>Laboratorio completo</li>
             <li>Electrocardiograma y evaluación cardiológica</li>
             <li>Espirometría y evaluación neumonológica</li>
@@ -87,13 +88,14 @@
 
       <details
         data-aos="fade-up"
+        data-aos-delay="100"
         class="group bg-white p-4 rounded-lg shadow-md"
       >
         <summary
           class="flex justify-between items-center font-bold text-lg text-brand-blue-dark cursor-pointer list-none"
         >
           ¿Qué seguimiento se realiza después de la cirugía? <span
-            class="transition group-open:rotate-180"
+            class="transition-transform duration-300 group-open:rotate-180"
           >
             <svg
               fill="none"
@@ -109,14 +111,14 @@
           </span>
         </summary>
         <div
-          class="faq-content transition-all duration-500 ease-in-out max-h-0 opacity-0"
+          class="faq-content overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out max-h-0 opacity-0"
         >
-          <p class="text-brand-gray-dark mt-4 mb-4">
+          <p class="text-brand-gray-dark pt-4 mb-4">
             Al igual que en el preoperatorio, es fundamental mantener controles
             periódicos con todo el equipo médico tras la cirugía. El objetivo de
             estos controles es:
           </p>
-          <ul class="list-disc list-inside">
+          <ul class="list-disc list-inside text-brand-gray-dark space-y-1 pl-4">
             <li>
               Evaluar la adherencia al plan alimentario, que irá avanzando de
               forma progresiva.
@@ -134,7 +136,6 @@
               bienestar general del paciente.
             </li>
           </ul>
-
           <p class="text-brand-gray-dark mt-4">
             Un seguimiento adecuado es clave para consolidar los resultados y
             mantener una buena calidad de vida.
@@ -144,13 +145,14 @@
 
       <details
         data-aos="fade-up"
+        data-aos-delay="150"
         class="group bg-white p-4 rounded-lg shadow-md"
       >
         <summary
           class="flex justify-between items-center font-bold text-lg text-brand-blue-dark cursor-pointer list-none"
         >
           ¿Qué tipos de procedimientos realizamos? <span
-            class="transition group-open:rotate-180"
+            class="transition-transform duration-300 group-open:rotate-180"
           >
             <svg
               fill="none"
@@ -166,14 +168,14 @@
           </span>
         </summary>
         <div
-          class="faq-content transition-all duration-500 ease-in-out max-h-0 opacity-0"
+          class="faq-content overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out max-h-0 opacity-0"
         >
-          <p class="text-brand-gray-dark mt-4 mb-4">
+          <p class="text-brand-gray-dark pt-4 mb-4">
             En Bariátrica Integral ofrecemos diferentes opciones para el
             tratamiento de la obesidad y enfermedades metabólicas, adaptadas a
             las necesidades de cada paciente:
           </p>
-          <ul class="list-disc list-inside">
+          <ul class="list-disc list-inside text-brand-gray-dark space-y-4 pl-4">
             <li>
               <span class="font-bold">
                 Gastrectomía tubular Laparoscópica o Manga Gástrica 🩺
@@ -237,16 +239,28 @@
     const detailsElements = document.querySelectorAll("details");
 
     detailsElements.forEach((details) => {
+      const content = details.querySelector(".faq-content");
+
+      if (!content || !(content instanceof HTMLElement)) return;
+
       details.addEventListener("toggle", () => {
-        const content = details.querySelector(".faq-content");
         if (details.open) {
-          content?.classList.remove("max-h-0", "opacity-0");
-          content?.classList.add("max-h-screen", "opacity-100");
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.opacity = "1";
         } else {
-          content?.classList.remove("max-h-screen", "opacity-100");
-          content?.classList.add("max-h-0", "opacity-0");
+          content.style.maxHeight = content.scrollHeight + "px";
+
+          requestAnimationFrame(() => {
+            content.style.maxHeight = "0";
+            content.style.opacity = "0";
+          });
         }
       });
+
+      if (details.open) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.opacity = "1";
+      }
     });
   });
 </script>
