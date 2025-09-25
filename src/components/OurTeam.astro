@@ -1,9 +1,3 @@
----
-const prevVideoImage1 = `${import.meta.env.BASE_URL}lucasprevideo.png`;
-const prevVideoImage2 = `${import.meta.env.BASE_URL}fernandaprevideo.png`;
-const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
----
-
 <section id="our-team" class="py-20 bg-brand-gray-light">
   <div class="container mx-auto px-6">
     <div data-aos="fade-up" class="text-center mb-12">
@@ -16,30 +10,30 @@ const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
       </p>
     </div>
 
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center"
-    >
+    <div class="flex flex-wrap justify-center gap-10">
       <div
         data-aos="fade-up"
         data-aos-delay="100"
-        class="bg-white p-4 rounded-lg shadow-xl flex flex-col overflow-hidden"
+        class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]
+               bg-white p-4 rounded-lg shadow-xl flex flex-col overflow-hidden"
       >
         <div class="w-full aspect-video">
           <video
-            class="w-full object-cover rounded-md max-h-[335px] md:max-h-[600px]"
+            class="w-full rounded-md"
             controls
             preload="metadata"
-            poster={prevVideoImage1}
+            poster="/lucasprevideo.png"
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/03/01-Dr.-Lucas-Travieso.mp4"
+            title="Presentación del Dr. Lucas Travieso, Médico Cirujano"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
             actualizarlo.
           </video>
         </div>
         <div class="pt-4 text-center">
-          <h3 class="text-xl font-bold text-brand-blue-dark">
+          <h4 class="text-xl font-bold text-brand-blue-dark">
             Dr. Lucas Travieso
-          </h3>
+          </h4>
           <p class="text-brand-blue font-semibold">Médico cirujano</p>
           <p class="text-brand-gray-dark mt-2 text-sm">
             Médico especialista en cirugía general, coloproctología, cirugía
@@ -48,27 +42,30 @@ const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
           </p>
         </div>
       </div>
+
       <div
         data-aos="fade-up"
         data-aos-delay="200"
-        class="bg-white p-4 rounded-lg shadow-xl flex flex-col overflow-hidden"
+        class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]
+               bg-white p-4 rounded-lg shadow-xl flex flex-col overflow-hidden"
       >
         <div class="w-full aspect-video">
           <video
-            class="w-full object-cover rounded-md max-h-[335px] md:max-h-[600px]"
+            class="w-full rounded-md"
             controls
             preload="metadata"
-            poster={prevVideoImage2}
+            poster="/fernandaprevideo.png"
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/03/03-Dra.-Fernanda-Gonzalez.mp4"
+            title="Presentación de la Lic. Fernanda González, Nutricionista"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
             actualizarlo.
           </video>
         </div>
         <div class="pt-4 text-center">
-          <h3 class="text-xl font-bold text-brand-blue-dark">
+          <h4 class="text-xl font-bold text-brand-blue-dark">
             Lic. Fernanda González
-          </h3>
+          </h4>
           <p class="text-brand-blue font-semibold">Nutricionista</p>
           <p class="text-brand-gray-dark mt-2 text-sm">
             Licenciada en Nutrición con más de 15 años de experiencia en el
@@ -76,27 +73,30 @@ const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
           </p>
         </div>
       </div>
+
       <div
         data-aos="fade-up"
         data-aos-delay="300"
-        class="bg-white p-4 rounded-lg shadow-xl flex flex-col overflow-hidden"
+        class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]
+               bg-white p-4 rounded-lg shadow-xl flex flex-col overflow-hidden"
       >
         <div class="w-full aspect-video">
           <video
-            class="w-full object-cover rounded-md max-h-[335px] md:max-h-[600px]"
+            class="w-full rounded-md"
             controls
             preload="metadata"
-            poster={prevVideoImage3}
+            poster="/nataliaprevideo.png"
             src="https://blueviolet-oyster-499778.hostingersite.com/wp-content/uploads/2025/03/02-Dra.-Natalia-Beitone.mp4"
+            title="Presentación de la Lic. Natalia Beitone, Psicóloga"
           >
             Tu navegador no soporta el tag de video. Te recomendamos
             actualizarlo.
           </video>
         </div>
         <div class="pt-4 text-center">
-          <h3 class="text-xl font-bold text-brand-blue-dark">
+          <h4 class="text-xl font-bold text-brand-blue-dark">
             Lic. Natalia Beitone
-          </h3>
+          </h4>
           <p class="text-brand-blue font-semibold">Psicóloga</p>
           <p class="text-brand-gray-dark mt-2 text-sm">
             Licenciada en Psicología por la Universidad de Buenos Aires,
@@ -111,22 +111,21 @@ const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
 
   <div class="container mx-auto px-6 mt-10">
     <div data-aos="fade-up" class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-brand-blue-dark mb-4">
+      <h3 class="text-3xl md:text-4xl font-bold text-brand-blue-dark mb-4">
         Equipo extendido
-      </h2>
+      </h3>
     </div>
 
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center"
-    >
+    <div class="flex flex-wrap justify-center gap-10">
       <div
         data-aos="fade-up"
         data-aos-delay="100"
-        class="bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
+        class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]
+               bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
       >
-        <h3 class="text-xl font-bold text-brand-blue-dark">
+        <h4 class="text-xl font-bold text-brand-blue-dark">
           Dra. Lucía Domingo
-        </h3>
+        </h4>
         <p class="text-brand-blue font-semibold">Ginecóloga</p>
         <p class="text-brand-gray-dark mt-2 text-sm">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. In doloribus
@@ -139,11 +138,12 @@ const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
       <div
         data-aos="fade-up"
         data-aos-delay="200"
-        class="bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
+        class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]
+               bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
       >
-        <h3 class="text-xl font-bold text-brand-blue-dark">
+        <h4 class="text-xl font-bold text-brand-blue-dark">
           Dra. Adriana Fiore
-        </h3>
+        </h4>
         <p class="text-brand-blue font-semibold">
           Clínica Médica y Endocrinología
         </p>
@@ -158,11 +158,12 @@ const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
       <div
         data-aos="fade-up"
         data-aos-delay="300"
-        class="bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
+        class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]
+               bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
       >
-        <h3 class="text-xl font-bold text-brand-blue-dark">
+        <h4 class="text-xl font-bold text-brand-blue-dark">
           Dra. Estrella Garofalo
-        </h3>
+        </h4>
         <p class="text-brand-blue font-semibold">Psiquiatra</p>
         <p class="text-brand-gray-dark mt-2 text-sm">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ut rem
@@ -175,11 +176,12 @@ const prevVideoImage3 = `${import.meta.env.BASE_URL}nataliaprevideo.png`;
       <div
         data-aos="fade-up"
         data-aos-delay="400"
-        class="bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
+        class="w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)]
+               bg-white rounded-lg shadow-lg text-center p-6 transform hover:-translate-y-2 transition-transform duration-300"
       >
-        <h3 class="text-xl font-bold text-brand-blue-dark">
+        <h4 class="text-xl font-bold text-brand-blue-dark">
           Dra. Marcela Deleu
-        </h3>
+        </h4>
         <p class="text-brand-blue font-semibold">Cardióloga</p>
         <p class="text-brand-gray-dark mt-2 text-sm">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ut rem
