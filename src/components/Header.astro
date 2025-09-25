@@ -13,45 +13,52 @@ const logoURL = `${import.meta.env.BASE_URL}logo.png`;
         alt="Bariatrica Integral Logo"
         class="h-8 md:h-8 w-auto"
       />
+      <span class="sr-only">Bariatrica Integral - Volver a Inicio</span>
     </a>
 
     <div class="hidden md:flex items-center space-x-6">
       <a
         href="/#"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        class="text-brand-gray-dark hover:text-brand-blue hover:scale-105 transition-transform duration-300"
         >Inicio</a
       >
       <a
         href="/#treatment-steps"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        class="text-brand-gray-dark hover:text-brand-blue hover:scale-105 transition-transform duration-300"
         >Tratamiento</a
       >
       <a
         href="/#locations"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        class="text-brand-gray-dark hover:text-brand-blue hover:scale-105 transition-transform duration-300"
         >Centros</a
       >
       <a
         href="/#faq"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
-        >Preguntas</a
+        class="text-brand-gray-dark hover:text-brand-blue hover:scale-105 transition-transform duration-300"
+        >Preguntas Frecuentes</a
       >
       <a
         href="/Procedures"
-        class="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300"
+        class="text-brand-gray-dark hover:text-brand-blue hover:scale-105 transition-transform duration-300"
         >Procedimientos</a
       >
     </div>
 
     <a
       href="/Contact"
-      class="hidden md:block bg-brand-blue text-white font-bold py-2 px-6 rounded-full hover:bg-brand-blue-dark transition-transform duration-300 hover:scale-105"
+      class="hidden md:block bg-brand-blue text-white font-bold py-1 px-4 rounded-full hover:bg-brand-blue-dark transition-transform duration-300 hover:scale-105 shadow-lg"
     >
       Contacto
     </a>
 
     <div class="md:hidden">
-      <button id="menu-btn" class="text-brand-gray-dark focus:outline-none">
+      <button
+        id="menu-btn"
+        class="text-brand-gray-dark focus:outline-none"
+        aria-label="Abrir menú principal"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         <svg
           class="w-6 h-6"
           fill="none"
@@ -71,10 +78,10 @@ const logoURL = `${import.meta.env.BASE_URL}logo.png`;
 
   <div
     id="mobile-menu"
-    class="md:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0"
+    class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0"
   >
     <a
-      href="/#home"
+      href="/#"
       class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
       >Inicio</a
     >
@@ -98,10 +105,14 @@ const logoURL = `${import.meta.env.BASE_URL}logo.png`;
       class="block py-2 px-6 text-sm text-brand-gray-dark hover:bg-brand-gray-light"
       >Procedimientos</a
     >
-    <div class="p-4">
+    <div class="p-6">
       <a
         href="/Contact"
-        class="w-full text-center block bg-brand-blue text-white font-bold py-3 px-6 rounded-full hover:bg-brand-blue-dark transition-transform duration-300 hover:scale-105"
+        class="w-full text-center block bg-brand-blue text-white font-bold p-1 rounded-full
+         transition-all duration-300 ease-in-out
+         hover:bg-brand-blue-dark hover:scale-105
+         focus:bg-brand-blue-dark focus:scale-105
+         active:bg-brand-blue-dark active:scale-105 shadow-lg"
       >
         Contacto
       </a>
@@ -114,12 +125,18 @@ const logoURL = `${import.meta.env.BASE_URL}logo.png`;
   const menu = document.getElementById("mobile-menu");
 
   function toggleMobileMenu() {
-    if (menu?.classList.contains("max-h-0")) {
-      menu.classList.remove("max-h-0", "opacity-0");
-      menu.classList.add("max-h-screen", "opacity-100");
+    const isExpanded = menu?.classList.contains("max-h-0");
+
+    if (isExpanded) {
+      menu?.classList.remove("max-h-0", "opacity-0");
+      menu?.classList.add("max-h-screen", "opacity-100");
+      btn?.setAttribute("aria-expanded", "true");
+      btn?.setAttribute("aria-label", "Cerrar menú principal");
     } else {
       menu?.classList.remove("max-h-screen", "opacity-100");
       menu?.classList.add("max-h-0", "opacity-0");
+      btn?.setAttribute("aria-expanded", "false");
+      btn?.setAttribute("aria-label", "Abrir menú principal");
     }
   }
 
