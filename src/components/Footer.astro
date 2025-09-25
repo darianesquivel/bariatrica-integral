@@ -1,134 +1,183 @@
----
-const logoURL = `${import.meta.env.BASE_URL}logo.png`;
----
-
 <footer class="bg-brand-blue-dark text-white">
   <div class="container mx-auto px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="text-center mb-12">
+      <h4 class="font-bold text-2xl mb-4">
+        ¿Listo para comenzar tu transformación?
+      </h4>
+      <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+        Comunícate con nuestro equipo para iniciar tu evaluación sin costo.
+      </p>
+      <a
+        href="https://wa.me/5491127184661?text=Hola%21+quiero+más+información+sobre+el+procedimiento..."
+        target="_blank"
+        class="inline-block md:w-auto text-center bg-brand-blue-light text-white font-bold py-3 px-10 rounded-full hover:bg-white hover:text-brand-blue-dark transition-colors duration-300 shadow-lg"
+      >
+        Contactar por WhatsApp
+      </a>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-10 border-t border-gray-700 pt-12"
+    >
       <div class="md:col-span-1">
         <img
-          src={logoURL}
+          src="/logo.png"
           alt="Bariatrica Integral Logo Blanco"
           class="h-16 w-auto mb-4 rounded-xl"
         />
-        <p class="text-gray-300 text-sm">
-          Equipo multidisciplinario dedicado al tratamiento de la obesidad y
-          enfermedades metabólicas.
+        <p class="text-gray-300 text-sm mb-6">
+          Equipo multidisciplinario dedicado al tratamiento integral de la
+          obesidad y enfermedades metabólicas.
         </p>
-      </div>
 
-      <div>
-        <h4 class="font-bold text-lg mb-4">Navegación</h4>
-        <ul class="space-y-2 text-gray-300">
-          <li>
-            <a href="#beneficios" class="hover:text-brand-blue-light"
-              >Beneficios</a
+        <div class="flex space-x-4">
+          <a
+            href="#"
+            target="_blank"
+            class="text-gray-400 hover:text-brand-blue-light transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><rect x="2" y="2" width="20" height="20" rx="5" ry="5"
+              ></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+              ></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
             >
-          </li>
-          <li>
-            <a href="#equipo" class="hover:text-brand-blue-light"
-              >Nuestro Equipo</a
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            class="text-gray-400 hover:text-brand-blue-light transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              ></path></svg
             >
-          </li>
-          <li>
-            <a href="#tratamiento" class="hover:text-brand-blue-light">Etapas</a
-            >
-          </li>
-          <li>
-            <a href="#faq" class="hover:text-brand-blue-light">Preguntas</a>
-          </li>
-        </ul>
+          </a>
+        </div>
       </div>
 
       <div>
         <h4 class="font-bold text-lg mb-4">Contacto</h4>
-        <ul class="space-y-3 text-gray-300">
+        <ul class="space-y-4 text-gray-300">
           <li class="flex items-center">
             <svg
-              class="w-5 h-5 mr-2"
+              class="w-5 h-5 mr-2 text-brand-blue-light"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
+              ><path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              ></path>
-            </svg>
-            info@bariatricaintegral.com
-          </li>
-          <li class="flex items-start">
-            <svg
-              class="w-5 h-5 mr-2 mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+              ></path></svg
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-            <div>
-              <p>INSTITUTO IMAC</p>
-              <p class="text-sm text-gray-400">
-                Av. Díaz Vélez 4363, Cdad. Autónoma de Buenos Aires
-              </p>
+            <a
+              href="mailto:info@bariatricaintegral.com"
+              class="hover:text-brand-blue-light">info@bariatricaintegral.com</a
+            >
+          </li>
+
+          <li class="pt-2">
+            <h5 class="text-base font-semibold text-white mb-1">
+              INSTITUTO IMAC
+            </h5>
+            <div class="flex items-start">
+              <svg
+                class="w-5 h-5 mr-2 mt-1 text-brand-blue-light flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg
+              >
+              <p class="text-sm text-gray-400">Av. Díaz Vélez 4363, CABA</p>
             </div>
           </li>
-          <li class="flex items-start">
-            <svg
-              class="w-5 h-5 mr-2 mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-            <div>
-              <p>SANATORIO FINOCHIETTO</p>
-              <p class="text-sm text-gray-400">
-                Av. Córdoba 2678, Cdad. Autónoma de Buenos Aires
-              </p>
+
+          <li class="pt-2">
+            <h5 class="text-base font-semibold text-white mb-1">
+              SANATORIO FINOCHIETTO
+            </h5>
+            <div class="flex items-start">
+              <svg
+                class="w-5 h-5 mr-2 mt-1 text-brand-blue-light flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg
+              >
+              <p class="text-sm text-gray-400">Av. Córdoba 2678, CABA</p>
             </div>
           </li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-bold text-lg mb-4">¿Listo para empezar?</h4>
-        <p class="text-gray-300 mb-4">
-          Enviános un WhatsApp y comenzá tu evaluación sin cargo.
-        </p>
-        <a
-          href="https://wa.me/5491127184661?text=Hola%21+quiero+más+información+sobre+el+procedimiento..."
-          target="_blank"
-          class="inline-block w-full text-center bg-brand-blue-light text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-brand-blue-dark transition-colors duration-300"
-        >
-          Contactar por WhatsApp
-        </a>
+        <h4 class="font-bold text-lg mb-4">Navegación Rápida</h4>
+        <ul class="space-y-3 text-gray-300">
+          <li>
+            <a href="#benefits" class="hover:text-brand-blue-light"
+              >Beneficios del Tratamiento</a
+            >
+          </li>
+          <li>
+            <a href="#our-team" class="hover:text-brand-blue-light"
+              >Nuestro Equipo Médico</a
+            >
+          </li>
+          <li>
+            <a href="#treatment-steps" class="hover:text-brand-blue-light"
+              >Etapas del Proceso</a
+            >
+          </li>
+          <li>
+            <a href="#faq" class="hover:text-brand-blue-light"
+              >Preguntas Frecuentes</a
+            >
+          </li>
+          <li>
+            <a href="#locations" class="hover:text-brand-blue-light"
+              >Ubicaciones</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
 
