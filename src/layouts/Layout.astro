@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import Whatsapp from "../components/Whatsapp.astro";
 interface LayoutProps {
   title: string;
   description?: string;
@@ -57,6 +58,7 @@ const siteURL = "https://bariatrica-integral.netlify.app";
 
     <main class="flex-grow">
       <slot />
+      <Whatsapp phone="5491127184661" message="Hola! Quiero mas informacion!" />
     </main>
 
     <Footer />
